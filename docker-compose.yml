@@ -1,0 +1,18 @@
+services:
+  nodered:
+    container_name: nodered
+    hostname: nodered
+    image: "nodered/node-red"
+    user: "1000"
+    ports:
+      - 1880:1880
+    volumes:
+      - "/home/quentin/docker/nodered/data:/data"
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
