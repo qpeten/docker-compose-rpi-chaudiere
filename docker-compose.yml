@@ -7,7 +7,7 @@ services:
     ports:
       - 1880:1880
     volumes:
-      - "/home/quentin/docker/nodered/data:/data"
+      - "/home/quentin/docker/data/nodered/data:/data"
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
     restart: unless-stopped
