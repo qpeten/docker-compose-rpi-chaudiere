@@ -10,6 +10,8 @@ services:
       - "/home/quentin/docker/data/nodered/data:/data"
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
+      - "/sys/bus/w1:/sys/bus/w1:ro"
+      - "/dev/gpiomem:/dev/gpiomem"
     restart: unless-stopped
     logging:
       driver: "json-file"
